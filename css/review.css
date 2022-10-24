@@ -62,6 +62,10 @@ header{
 .header .logo img{
     height: 6rem;
 }
+.header .navbar{
+    min-height: 0;
+    margin-bottom: 0;
+}
 .header .navbar li{
     display: inline-block;
     margin:0 1rem;
