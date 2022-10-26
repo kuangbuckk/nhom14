@@ -51,7 +51,7 @@ body{
 }
 
 .col-third{
-    width: calc(33.3333%);
+    width: 33.3333%;
 }
 
 .col-third-food{
@@ -596,10 +596,11 @@ border-radius: 16px;
     .menu #food-menu .food-menu-list{
         border-right: 0px;
     }
-    
+
     .col-third{
         width: 100%;
     }
+
     .col-third-food
     {
         width: 100%;
@@ -692,5 +693,9 @@ border-radius: 16px;
     
     .header li:hover #subnav{
         display: none;
+    }
+
+    .col-third{
+        width: 100%;
     }
 }
