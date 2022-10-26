@@ -51,9 +51,12 @@ body{
 }
 
 .col-third{
-    width: 33.3333%;
+    width: calc(33.3333%);
 }
 
+.col-third-food{
+    width: calc(33.3333% - 2rem);
+}
 .col-full{
     width: 100%;
 }
@@ -252,9 +255,84 @@ section{
     color: var(--main-color);
 }
 
+#menu-section .menu .box image{
+    width: 100%;
+}
+
+#menu-section .menu .box p{
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+#menu-section .menu .box button{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding: 1em;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+#menu-section .menu .box:hover{
+    background-color: black;
+    color: white;
+}
+
 .menu{
     margin-bottom: 80px;
 }
+
+.menu #food-menu{
+    margin-top: 2rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #000000 100%);
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+}
+.menu #food-menu h1{
+    color: white;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.menu #food-menu h2{
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+    text-align: center;
+    border-bottom: 0px;
+}
+.menu #food-menu .img{
+    height: 30rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.menu #food-menu img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu #food-menu .food-menu-list{
+    border-right: 3px solid gray;
+    position: relative;
+    margin: 1rem;
+    height: 18em;
+}
+
+.menu #food-menu li{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.2em;
+    color: white;
+    list-style: none;
+    text-align: left;
+} 
+
+.menu #food-menu .food-price{
+    font-size: 1em;
+    
+    right: 0;
+    position: absolute;
+    margin-right: 1em;
+} 
 
 #menu-section .menu{
     margin: 0 auto;
@@ -268,95 +346,6 @@ section{
     box-sizing: border-box;
     padding: 60px 100px;
     margin: 5px 0px;
-}
-
-#menu-section .menu .box image{
-    width: 100%;
-}
-
-#menu-section .menu .box p{
-    margin-top: 8px;
-    font-size: 20px;
-}
-
-#menu-section .menu .box:hover{
-    background-color: black;
-    color: white;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-#menu-section .menu-list{
-    margin-top: 10px;
-}
-
-#menu-section .menu .brunch{
-    padding: 20px;
-    margin: 20px;
-    background-color: rgba(97, 12, 12);
-    color: var(--main-color);
-}
-
-#menu-section .menu .brunch h1{
-    color: var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    margin-bottom: 10px;
-}
-
-#menu-section .menu .brunch p{
-    padding: 20px;
-    color: var(--main-color);
-    font-size: 26px;
-}
-
-#menu-section .menu .brunch #brunch-img{
-    width: 60%;
-    height: 100%;
-    float: right;
-}
-
-#menu-section .menu #bruchesta{
-    padding: 14px;
-    margin: 20px;
-    background-color: rgb(34, 22, 78);
-    color: var(--main-color);
-}
-
-#menu-section .menu #bruchesta .bruchesta-img{
-    width: 550px;
-    height: 100%;
-    float: right;
-}
-
-#menu-section .menu #bruchesta .bruchesta-img:nth-of-type(2n){
-    width: 550px;
-    height: 100%;
-    float: left;
-}
-
-#menu-section .menu #bruchesta h1:first-child{
-    font-size: 10rem;
-    color: rgb(241, 227, 19);
-    font-family: 'Pacifico', cursive;
-}
-
-#menu-section .menu #bruchesta #bruchesta-menu-content:nth-of-type(2n){
-    font-size: 20px;
-}
-
-#menu-section .menu #bruchesta #bruchesta-menu-content h1{
-   font-size: 40px;
-   color: rgb(241, 227, 19);
-}
-
-#menu-section .menu #bruchesta #bruchesta-menu-content p{
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-#menu-section .menu #bruchesta .price{
-    font-size: 30px;
-   color: rgb(241, 227, 19);
 }
 
 .footer{
@@ -604,7 +593,11 @@ border-radius: 16px;
         font-size: 1.5rem;
     }
 
-    .col-third
+    .menu #food-menu .food-menu-list{
+        border-right: 0px;
+    }
+
+    .col-third-food
     {
         width: 100%;
     }
@@ -692,18 +685,6 @@ border-radius: 16px;
 
     html{
         font-size: 50%;
-    }
-
-    #menu-btn{
-        display: inline-block;
-    }
-    
-    #menu-section .menu-list{
-        width: 100%;
-    }
-
-    .menu #bruchesta h1:first-of-type{
-        font-size: 1em;
     }
     
     .header li:hover #subnav{
