@@ -1,27 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#d3ad7f;
+    --main-color:rgb(199, 150, 86);
     --black:#13131a;
     --bg:#ffffff;
-    --border:.16px solid rgba(255,255,255,.3);
+    --border:.1rem solid rgba(255,255,255,.3);
 }
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;  
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg);
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
 }
+
+html::-webkit-scrollbar{
+    width: .8rem;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 5rem;
+}
+
+body{
+    background: white;
+}
+
+.clear{
+    clear: both;
+    display: block; 
+}
+
+.col{
+    float: left;
+}
+
+.col-third{
+    width: 33.3333%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+
 .heading{
     text-align: center;
     color:#fff;
@@ -114,6 +151,91 @@ body{
     margin-left: 2rem;
 }
 
+.header .icons div:hover{
+    color:black;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+.header .search-form{
+    position: absolute;
+    top:115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    border: 1px solid rgb(173, 171, 171);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+.about h2{
+    color: var(--main-color);
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 9.375rem;
+}
+
+
 .about-section{
     background: url(../images/pexels-brigitte-tohm-133222.jpg) no-repeat left;
     background-size: 55%;
@@ -121,7 +243,8 @@ body{
     overflow: hidden;
     padding: 5em 0;
     /* box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.5); */
-    margin-bottom: 0.15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .about-section2{
@@ -131,7 +254,8 @@ body{
     background-color: var(--bg);
     overflow: hidden;
     padding: 5em 0;
-    margin-bottom: 0.15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .about-section3{
@@ -141,7 +265,8 @@ body{
     background-color: var(--bg);
     overflow: hidden;
     padding: 5em 0;
-    margin-bottom: 0.15em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .about-section4{
@@ -194,52 +319,52 @@ body{
 }
 
 .inner-container h1{
-    margin-bottom: 1.875rem;
-    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 .inner-container2 h1{
     /* text-align: right; */
-    margin-bottom: 1.875rem;
-    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 .inner-container3 h1{
-    margin-bottom: 1.875rem;
-    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 .inner-container4 h1{
     /* text-align: right; */
-    margin-bottom: 1.875rem;
-    font-size: 1.875rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 .text{
-    font-size: 1rem;
+    font-size: 2.1rem;
     color: var(--black);
-    line-height: 1.875rem;
+    line-height: 5.3rem;
     text-align: justify;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .todo{
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
-.todo .btn{
+.todo .btn1{
     color:#d3ad7f;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn1:hover{
     color:#F0EAD2;
 }
 
@@ -249,14 +374,6 @@ h1 span{
 h2 span{
     color: var(--main-color);
 }
-.about h2{
-    padding: 0.625rem 0 1.25rem 0;
-    text-align: center;
-    border-radius: 1.875rem;
-    font-size: 2.5rem;
-    margin-top: 9.375rem;
-}
-
 
 html::-webkit-scrollbar{
     width: .8rem;
@@ -287,7 +404,7 @@ html::-webkit-scrollbar-thumb{
     width: 100%;
     margin-top: 0.625rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 .card{
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
@@ -299,27 +416,29 @@ html::-webkit-scrollbar-thumb{
     background-color: white;
 }
 .card .img-cont{
-    width: 6.4em;
-    height: 6.4em;
-    background-color: #ffe2be;
-    padding: 0.8em;
+    width: 11.5em;
+    height: 11.5em;
+    background-color: #ffd5a1;
+    padding: 2em;
     border-radius: 50%;
-    margin: 0 auto 1.6em auto;
+    margin: 0 auto 3em auto;
 }
 .card img{
-    width: 100%;
+    width:100%;
     border-radius: 50%;
 }
 .card h4{
     font-weight: 500;
+    font-size: 2em;
 }
 .card p{
     font-weight: 300;
+    font-size: 1.5em;
     text-transform: uppercase;
     margin: 0.4em 0 1.6em 0;
     letter-spacing: 0.1em;
 }
-.icons{
+.icon{
     width: 50%;
     min-width: 9em;
     margin: auto;
@@ -329,7 +448,7 @@ html::-webkit-scrollbar-thumb{
 .card a{
     text-decoration: none;
     color: inherit;
-    font-size: 1.1em;
+    font-size: 2.5em;
 }
 .card:hover{
     background: linear-gradient(#fdfdfd, #ffdeb5);
@@ -337,8 +456,185 @@ html::-webkit-scrollbar-thumb{
 }
 .card:hover .img-cont{
     transform: scale(1.15);
+} 
+
+.footer{
+    background:white;
+    text-align: center;
 }
 
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: black;
+    border: var(--border);
+    margin: 0.3rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.box{
+    box-shadow: 0 0 16px 0 rgb(0 0 0 / 30%);
+border-radius: 16px;
+
+}
+
+/* FOOTER */
+
+.footer {
+    color: #fff;
+      font-family: acumin-pro, system-ui, sans-serif;
+      margin: 0;
+      grid-template-rows: auto 1fr auto;
+      font-size: 16px;
+      background-color:#13131a;
+      align-items: start;
+      display: flex;
+      flex-flow: row wrap;
+      padding: 30px 30px 20px 30px;
+      color: #fff;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    
+.footer .share a:hover{
+    background-color: white;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding: 0.7rem 2rem;
+    color: black;
+    border: var(--border);
+    font-size: 2rem;
+    background-color: var(--main-color);
+}
+
+.footer .links a:hover{
+    background:white;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:white;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+    .footer > * {
+      flex:  1 100%;
+    }
+    
+    .footer__addr {
+      margin-right: 1.25em;
+      margin-bottom: 2em;
+      text-align: justify;
+    }
+    
+    .footer__logo {
+      font-family: 'Pacifico', cursive;
+      font-weight: 400;
+      text-transform: lowercase;
+      font-size: 1.5rem;
+    }
+    
+    .footer__addr h2 {
+      margin-top: 1.3em;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 0.5em;
+    }
+    
+    .nav__title {
+      font-weight: 400;
+      font-size: 15px;
+    }
+    
+    .footer address {
+        font-style: normal;
+        color: #fff;
+    }
+    
+    .footer__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      max-width: max-content;
+      background-color: rgb(33, 33, 33, 0.07);
+      border-radius: 100px;
+      color: #2f2f2f;
+      line-height: 0;
+      margin: 0.6em 0;
+      font-size: 1rem;
+      padding: 0 1.3em;
+    }
+    
+    .footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer li {
+      line-height: 2em;
+    }
+    
+    .footer a {
+      text-decoration: none;
+    }
+    
+    .footer__nav {
+      display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .footer__nav > * {
+      flex: 1 50%;
+      margin-right: 1.25em;
+    }
+    
+    .nav__ul a {
+          color: #fff;
+    }
+    
+    .nav__ul--extra {
+      column-count: 2;
+      column-gap: 1.25em;
+    }
+    
+    .nav__item{
+        text-align: justify;
+    }
+    
+    .nav__item span{
+        margin-right: 1em;
+    }
+    .legal {
+      display: flex;
+      flex-wrap: wrap;
+    
+    }
+      
+    .legal__links {
+      display: flex;
+      align-items: center;
+    }
 
 
 
@@ -406,7 +702,30 @@ html::-webkit-scrollbar-thumb{
 }
 
 
-
+@media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
+  
 
 @media screen and (min-width:992px) {
     .card{
@@ -422,7 +741,7 @@ html::-webkit-scrollbar-thumb{
 @media (max-width:991px){
 
     html{
-        font-size: 50%;
+        font-size: 55%;
     }
 
     .header{
