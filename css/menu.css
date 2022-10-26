@@ -596,7 +596,10 @@ border-radius: 16px;
     .menu #food-menu .food-menu-list{
         border-right: 0px;
     }
-
+    
+    .col-third{
+        width: 100%;
+    }
     .col-third-food
     {
         width: 100%;
