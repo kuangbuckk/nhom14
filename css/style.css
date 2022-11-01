@@ -772,10 +772,13 @@ border-radius: 16px;
     .home .content p{
         font-size: 1.5rem;
     }
-
+    
+    .header li:hover #subnav{
+        display: none;
+    }
 }
 
-@media (max-width:450px){
+@media (max-width:550px){
 
     html{
         font-size: 50%;
@@ -784,8 +787,13 @@ border-radius: 16px;
     #menu-btn{
         display: inline-block;
     }
+
+    .header li:hover #subnav{
+        display: none;
+    }
 }
 
+/* media query cua footer */
 @media screen and (min-width: 24.375em) {
     .legal .legal__links {
       margin-left: auto;
